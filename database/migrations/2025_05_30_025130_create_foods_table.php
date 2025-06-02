@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('price_afterdiscount')->nullable();
             $table->string('percent')->nullable();
             $table->string('is_promo')->nullable();
-            $table->integer(categories_id)->constrained('categories')->cascadeOnDelete();
+            $table->integer('categories_id')->constrained('categories')->cascadeOnDelete();
             $table->timestamps();
         });
     }
